@@ -1,0 +1,753 @@
+[
+    {
+        "matchID": 61029,
+        "matchDateTime": "2022-02-04T20:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-04T19:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 54,
+            "teamName": "Hertha BSC",
+            "shortName": "Hertha",
+            "teamIconUrl": "https://i.imgur.com/apFwbYZ.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 129,
+            "teamName": "VfL Bochum",
+            "shortName": "Bochum",
+            "teamIconUrl": "https://i.imgur.com/5jy3Gfr.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-04T22:22:42.887",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97277,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 1,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97278,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 0,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93098,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 23,
+                "goalGetterID": 7180,
+                "goalGetterName": "Belfodil",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93099,
+                "scoreTeam1": 1,
+                "scoreTeam2": 1,
+                "matchMinute": 48,
+                "goalGetterID": 3186,
+                "goalGetterName": "Sebastian Polter",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61025,
+        "matchDateTime": "2022-02-05T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 83,
+            "teamName": "Arminia Bielefeld",
+            "shortName": "Bielefeld",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/de/thumb/e/e5/Logo_Arminia_Bielefeld.svg/2000px-Logo_Arminia_Bielefeld.svg.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 87,
+            "teamName": "Borussia Mönchengladbach",
+            "shortName": "Gladbach",
+            "teamIconUrl": "https://i.imgur.com/KSIk0Eu.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T17:24:02.17",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97285,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 1,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97286,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 1,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93110,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 19,
+                "goalGetterID": 18335,
+                "goalGetterName": "J. Serra",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93112,
+                "scoreTeam1": 1,
+                "scoreTeam2": 1,
+                "matchMinute": 38,
+                "goalGetterID": 18574,
+                "goalGetterName": "A. Plea",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61026,
+        "matchDateTime": "2022-02-05T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 95,
+            "teamName": "FC Augsburg",
+            "shortName": "Augsburg",
+            "teamIconUrl": "https://i.imgur.com/sdE62e2.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 80,
+            "teamName": "1. FC Union Berlin",
+            "shortName": "Union Berlin",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/1._FC_Union_Berlin_Logo.svg",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T17:23:55.24",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97287,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 2,
+                "pointsTeam2": 0,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97288,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 0,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93109,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 16,
+                "goalGetterID": 18815,
+                "goalGetterName": "M. Gregoritsch",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93115,
+                "scoreTeam1": 2,
+                "scoreTeam2": 0,
+                "matchMinute": 59,
+                "goalGetterID": 18542,
+                "goalGetterName": "A. Hahn",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61030,
+        "matchDateTime": "2022-02-05T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 65,
+            "teamName": "1. FC Köln",
+            "shortName": "Köln",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/FC_Cologne_logo.svg/1200px-FC_Cologne_logo.svg.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 112,
+            "teamName": "SC Freiburg",
+            "shortName": "Freiburg",
+            "teamIconUrl": "https://i.imgur.com/r3mvi0h.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T17:25:45.893",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97289,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 0,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97290,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 0,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93111,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 23,
+                "goalGetterID": 18347,
+                "goalGetterName": "A. Modeste",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61031,
+        "matchDateTime": "2022-02-05T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 81,
+            "teamName": "1. FSV Mainz 05",
+            "shortName": "Mainz",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Logo_Mainz_05.svg/1200px-Logo_Mainz_05.svg.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 175,
+            "teamName": "TSG 1899 Hoffenheim",
+            "shortName": "Hoffenheim",
+            "teamIconUrl": "https://i.imgur.com/gF0PfEl.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T17:25:47.69",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97293,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 2,
+                "pointsTeam2": 0,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97294,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 0,
+                "pointsTeam2": 0,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93118,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 79,
+                "goalGetterID": 17731,
+                "goalGetterName": "Jae-Sung Lee",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93119,
+                "scoreTeam1": 2,
+                "scoreTeam2": 0,
+                "matchMinute": 83,
+                "goalGetterID": 18512,
+                "goalGetterName": "M. Niakhate",
+                "isPenalty": true,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61032,
+        "matchDateTime": "2022-02-05T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 16,
+            "teamName": "VfB Stuttgart",
+            "shortName": "Stuttgart",
+            "teamIconUrl": "https://i.imgur.com/v0tkpNx.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 91,
+            "teamName": "Eintracht Frankfurt",
+            "shortName": "Frankfurt",
+            "teamIconUrl": "https://i.imgur.com/X8NFkOb.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T17:25:53.567",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97291,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 2,
+                "pointsTeam2": 3,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97292,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 1,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93108,
+                "scoreTeam1": 0,
+                "scoreTeam2": 1,
+                "matchMinute": 7,
+                "goalGetterID": 16946,
+                "goalGetterName": "Ndicka",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93113,
+                "scoreTeam1": 1,
+                "scoreTeam2": 1,
+                "matchMinute": 42,
+                "goalGetterID": 16929,
+                "goalGetterName": "Waldemar Anton",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93114,
+                "scoreTeam1": 1,
+                "scoreTeam2": 2,
+                "matchMinute": 47,
+                "goalGetterID": 18755,
+                "goalGetterName": "A. Hrustic",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93116,
+                "scoreTeam1": 2,
+                "scoreTeam2": 2,
+                "matchMinute": 70,
+                "goalGetterID": 18381,
+                "goalGetterName": "S. Kalajdzic",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93117,
+                "scoreTeam1": 2,
+                "scoreTeam2": 3,
+                "matchMinute": 77,
+                "goalGetterID": 18755,
+                "goalGetterName": "A. Hrustic",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61027,
+        "matchDateTime": "2022-02-05T18:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-05T17:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 40,
+            "teamName": "FC Bayern München",
+            "shortName": "Bayern",
+            "teamIconUrl": "https://i.imgur.com/jJEsJrj.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 1635,
+            "teamName": "RB Leipzig",
+            "shortName": "Leipzig",
+            "teamIconUrl": "https://i.imgur.com/Rpwsjz1.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-05T20:23:13.547",
+        "matchIsFinished": true,
+        "matchResults": [
+            {
+                "resultID": 97295,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 3,
+                "pointsTeam2": 2,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97296,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 2,
+                "pointsTeam2": 1,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93120,
+                "scoreTeam1": 1,
+                "scoreTeam2": 0,
+                "matchMinute": 12,
+                "goalGetterID": 15523,
+                "goalGetterName": " T. Müller",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93121,
+                "scoreTeam1": 1,
+                "scoreTeam2": 1,
+                "matchMinute": 27,
+                "goalGetterID": 18484,
+                "goalGetterName": "A. Silva",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93122,
+                "scoreTeam1": 2,
+                "scoreTeam2": 1,
+                "matchMinute": 44,
+                "goalGetterID": 18332,
+                "goalGetterName": "R. Lewandowski",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93123,
+                "scoreTeam1": 2,
+                "scoreTeam2": 2,
+                "matchMinute": 53,
+                "goalGetterID": 18782,
+                "goalGetterName": "C. Nkunku",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93124,
+                "scoreTeam1": 3,
+                "scoreTeam2": 2,
+                "matchMinute": 58,
+                "goalGetterID": 19193,
+                "goalGetterName": "J. Gvardiol",
+                "isPenalty": false,
+                "isOwnGoal": true,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61028,
+        "matchDateTime": "2022-02-06T15:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-06T14:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 7,
+            "teamName": "Borussia Dortmund",
+            "shortName": "BVB",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/560px-Borussia_Dortmund_logo.svg.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 6,
+            "teamName": "Bayer Leverkusen",
+            "shortName": "Leverkusen",
+            "teamIconUrl": "https://upload.wikimedia.org/wikipedia/de/thumb/f/f7/Bayer_Leverkusen_Logo.svg/1200px-Bayer_Leverkusen_Logo.svg.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2022-02-06T16:00:56.147",
+        "matchIsFinished": false,
+        "matchResults": [
+            {
+                "resultID": 97308,
+                "resultName": "Endergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 3,
+                "resultOrderID": 1,
+                "resultTypeID": 2,
+                "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+            },
+            {
+                "resultID": 97309,
+                "resultName": "Halbzeitergebnis",
+                "pointsTeam1": 1,
+                "pointsTeam2": 3,
+                "resultOrderID": 2,
+                "resultTypeID": 1,
+                "resultDescription": null
+            }
+        ],
+        "goals": [
+            {
+                "goalID": 93151,
+                "scoreTeam1": 0,
+                "scoreTeam2": 1,
+                "matchMinute": 11,
+                "goalGetterID": 18429,
+                "goalGetterName": "M. Akanji",
+                "isPenalty": false,
+                "isOwnGoal": true,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93152,
+                "scoreTeam1": 1,
+                "scoreTeam2": 1,
+                "matchMinute": 16,
+                "goalGetterID": 18476,
+                "goalGetterName": "T. Meunier",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93153,
+                "scoreTeam1": 1,
+                "scoreTeam2": 2,
+                "matchMinute": 20,
+                "goalGetterID": 18494,
+                "goalGetterName": "F. Wirtz",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            },
+            {
+                "goalID": 93154,
+                "scoreTeam1": 1,
+                "scoreTeam2": 3,
+                "matchMinute": 28,
+                "goalGetterID": 18670,
+                "goalGetterName": "R. Andrich",
+                "isPenalty": false,
+                "isOwnGoal": false,
+                "isOvertime": false,
+                "comment": null
+            }
+        ],
+        "location": null,
+        "numberOfViewers": null
+    },
+    {
+        "matchID": 61033,
+        "matchDateTime": "2022-02-06T17:30:00",
+        "timeZoneID": "W. Europe Standard Time",
+        "leagueId": 4500,
+        "leagueName": "1. Fußball-Bundesliga 2021/2022",
+        "leagueSeason": 2021,
+        "leagueShortcut": "bl1",
+        "matchDateTimeUTC": "2022-02-06T16:30:00Z",
+        "group": {
+            "groupName": "21. Spieltag",
+            "groupOrderID": 21,
+            "groupID": 38197
+        },
+        "team1": {
+            "teamId": 131,
+            "teamName": "VfL Wolfsburg",
+            "shortName": "Wolfsburg",
+            "teamIconUrl": "https://i.imgur.com/ucqKV4B.png",
+            "teamGroupName": null
+        },
+        "team2": {
+            "teamId": 115,
+            "teamName": "SpVgg Greuther Fürth",
+            "shortName": "Fürth",
+            "teamIconUrl": "https://i.imgur.com/pwuVbKr.png",
+            "teamGroupName": null
+        },
+        "lastUpdateDateTime": "2021-11-30T09:17:04.72",
+        "matchIsFinished": false,
+        "matchResults": [],
+        "goals": [],
+        "location": null,
+        "numberOfViewers": null
+    }
+]
