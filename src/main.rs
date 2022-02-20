@@ -1,6 +1,34 @@
 use std::fs::File;
+use std::fs::read_to_string;
 use std::io::Write;
 use std::collections::HashMap;
+use clap::{Parser, Subcommand};
+
+fn get_default_season() -> u32 {
+    2021
+}
+
+#[derive(Parser)]
+#[clap(author, version, about, long_about = None)]
+#[clap(propagate_version = true)]
+struct Cli {
+    #[clap(subcommand)]
+    command: Commands,
+
+    /// the season
+    #[clap(short, long, default_value_t = get_default_season())]
+    season: u32,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    /// shows statistics
+    Show { 
+    },
+    /// Updates season
+    Update {
+    }
+}
 
 struct Game
 {
@@ -10,20 +38,29 @@ struct Game
     team_2_goals: u32,    
 }
 
-fn fetch(season: u32) -> String {
+fn main() {
+    let cli = Cli::parse();
+    match &cli.command {
+        Commands::Show {  } => {
+            show(cli.season);
+        },
+        Commands::Update {  } => {
+            update(cli.season);
+        }
+
+    }
+}
+
+fn fetch(season: u32) {
     let url = format!("https://api.openligadb.de/getmatchdata/bl1/{:}", season);
     let response = reqwest::blocking::get(url).unwrap().text().unwrap();
 
     let mut file = File::create(format!("data/season_{:}.json", season)).unwrap();
     write!(file, "{}", response).unwrap();
-    response
 }
 
-fn main() {
-    let contents = fetch(2021);
-
-
-    // let contents = read_to_string("data/2021_21.json").unwrap();
+fn show(season: u32) {
+    let contents = read_to_string(format!("data/season_{:}.json", season)).unwrap();
     let parsed = json::parse(contents.as_str()).unwrap();
 
     let mut games: Vec<Game> = Vec::new();
@@ -67,4 +104,10 @@ fn main() {
     for (team, team_goals) in sortable_goals {
         println!("{:25}: {}", team, team_goals);
     }
+
+}
+
+fn update(season: u32) {
+    fetch(season);
+    println!("updated season={:}", season);
 }
