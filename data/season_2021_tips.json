@@ -1,0 +1,23 @@
+{
+    "{day}_{whom}_{team_1}": {
+        "whom": "Bob",
+        "day": 1,
+        "team_1": "Gladbach",
+        "team_1_goals": 1,
+        "team_2_goals": 2
+    },
+    "1_Bob_Gladbach": {
+        "whom": "Bob",
+        "day": 1,
+        "team_1": "Gladbach",
+        "team_1_goals": 1,
+        "team_2_goals": 2
+    },
+    "1_John_Gladbach": {
+        "whom": "John",
+        "day": 1,
+        "team_1": "Gladbach",
+        "team_1_goals": 42,
+        "team_2_goals": 1
+    }
+}
