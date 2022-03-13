@@ -72,6 +72,7 @@ struct Submit
     team_2_goals: Option<u32>
 }
 
+#[derive(PartialEq)]
 struct Goal
 {
     team_1_goals: u32,
@@ -83,6 +84,7 @@ struct Tip
     day: u32,
     team_1: String,
     team_2: String,
+    match_result: Option<Goal>, 
     goals: HashMap<String, Goal> 
 }
 
@@ -122,19 +124,26 @@ fn show(season: u32, what: &str) {
     match what {
         "goals" => show_goals(season),
         "tips" => show_tips(season),
+        "score" => show_score(season),
         _ => ()
     }
 }
 
-fn show_tips(season: u32) {
+fn get_players(season: u32) -> Vec<String> {
     let mut players: HashSet<String> = HashSet::new();
     let tips_json = get_tips_json(season);
     for (_, tip2) in tips_json.entries() {
         let whom = String::from(tip2["whom"].as_str().unwrap());
         players.insert(whom);
     }
-    let players : Vec<String> = players.into_iter().collect();
+    
+    players.into_iter().collect()
+}
 
+fn get_tips(season: u32) -> Vec<Tip>
+{
+    let players = get_players(season);
+    let tips_json = get_tips_json(season);
 
     let contents = read_to_string(format!("data/season_{:}.json", season)).unwrap();
     let season_json = json::parse(contents.as_str()).unwrap();
@@ -150,18 +159,34 @@ fn show_tips(season: u32) {
             let key = format!("{:}_{:}_{:}", day, &player, team_1);
 
             if tips_json.has_key(&key) {
-                    let team_1_goals = tips_json[&key]["team_1_goals"].as_u32().unwrap();
+                let team_1_goals = tips_json[&key]["team_1_goals"].as_u32().unwrap();
                 let team_2_goals = tips_json[&key]["team_2_goals"].as_u32().unwrap();
 
                 goals.insert(String::from(player), Goal { team_1_goals, team_2_goals});
             }
         }
 
-        tips.push(Tip{day, team_1, team_2, goals});
+        let is_finished = game["matchIsFinished"].as_bool().unwrap();
+        let match_result: Option<Goal> = match is_finished {
+            true => {
+                let team_1_goals = game["matchResults"][0]["pointsTeam1"].as_u32().unwrap();
+                let team_2_goals = game["matchResults"][0]["pointsTeam2"].as_u32().unwrap();    
+                Some(Goal{team_1_goals, team_2_goals})
+            },
+            false => None
+        };
+
+        tips.push(Tip{day, team_1, team_2, match_result, goals});
     }
 
+    tips
+}
 
-    print!("Day | {:30} | ", "Game");
+fn show_tips(season: u32) {
+    let players = get_players(season);
+    let tips = get_tips(season);
+
+    print!("Day | {:30} | {:10} | ", "Game", "Result");
     for player in &players {
         print!("{:10} | ", player);
     }
@@ -169,7 +194,11 @@ fn show_tips(season: u32) {
 
     for tip in tips {
         let game_name = format!("{:} vs. {:}", tip.team_1, tip.team_2);
-        print!("{:3} | {:30} | ", tip.day, game_name);
+        let result_text = match tip.match_result {
+            Some(v) => format!("{:}:{:}", v.team_1_goals, v.team_2_goals),
+            _ => String::from("-")
+        };
+        print!("{:3} | {:30} | {:10} | ", tip.day, game_name, result_text);
         for player in &players {
             let goals = tip.goals.get(player);
             let goals_text = match goals {
@@ -179,6 +208,86 @@ fn show_tips(season: u32) {
             print!("{:10} | ", goals_text);
         }
         println!("");
+    }
+}
+
+fn get_tendency(result: &Goal) -> i32 {
+    if result.team_1_goals > result.team_2_goals
+    {
+        1
+    }
+    else if result.team_1_goals < result.team_2_goals
+    {
+        -1
+    }
+    else
+    {
+        0
+    }
+}
+
+fn get_goal_diff(result: &Goal) -> u32 {
+    if result.team_1_goals > result.team_2_goals
+    {
+        result.team_1_goals - result.team_2_goals
+    }
+    else if result.team_1_goals < result.team_2_goals
+    {
+        result.team_2_goals - result.team_1_goals
+    }
+    else
+    {
+        0
+    }
+}
+
+fn get_score(guess: &Goal, result: &Goal) -> u32
+{
+    if guess == result
+    {
+        4
+    }
+    else if get_tendency(guess) == get_tendency(result)
+    {
+        if get_goal_diff(guess) == get_goal_diff(result)
+        {
+            3
+        }
+        else
+        {
+            2
+        }
+    }
+    else
+    {
+        0
+    }
+}
+
+fn show_score(season: u32) {
+    let players = get_players(season);
+    let tips = get_tips(season);
+
+    let mut score : HashMap<String, u32> = HashMap::new();
+    for player in &players {
+        let value = tips.iter().fold(0, |v, tip| {
+            let opt_guess = tip.goals.get(player);
+            match opt_guess {
+                Some(guess) => {
+                    match &tip.match_result {
+                        Some(match_result) => v + get_score(&guess, &match_result),
+                        _ => v
+                    }        
+                },
+                _ => v
+            }
+        });
+
+        score.insert(String::from(player), value);
+    }
+
+    for (player, value) in score {
+        println!("{:10}: {:}", player, value);
     }
 }
 
