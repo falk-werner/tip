@@ -2,6 +2,7 @@ use std::fs::File;
 use std::fs::read_to_string;
 use std::io::Write;
 use std::collections::HashMap;
+use std::collections::HashSet;
 use clap::{Parser, Subcommand};
 use std::io;
 use json::JsonValue;
@@ -26,6 +27,8 @@ struct Cli {
 enum Commands {
     /// shows statistics
     Show { 
+        #[clap(short, long, default_value="goals")]
+        what: String
     },
     /// Updates season
     Update {
@@ -69,12 +72,25 @@ struct Submit
     team_2_goals: Option<u32>
 }
 
+struct Goal
+{
+    team_1_goals: u32,
+    team_2_goals: u32
+}
+
+struct Tip
+{
+    day: u32,
+    team_1: String,
+    team_2: String,
+    goals: HashMap<String, Goal> 
+}
 
 fn main() {
     let cli = Cli::parse();
     match &cli.command {
-        Commands::Show {  } => {
-            show(cli.season);
+        Commands::Show { what } => {
+            show(cli.season, what);
         },
         Commands::Update {  } => {
             update(cli.season);
@@ -102,7 +118,71 @@ fn fetch(season: u32) {
     write!(file, "{}", response).unwrap();
 }
 
-fn show(season: u32) {
+fn show(season: u32, what: &str) {
+    match what {
+        "goals" => show_goals(season),
+        "tips" => show_tips(season),
+        _ => ()
+    }
+}
+
+fn show_tips(season: u32) {
+    let mut players: HashSet<String> = HashSet::new();
+    let tips_json = get_tips_json(season);
+    for (_, tip2) in tips_json.entries() {
+        let whom = String::from(tip2["whom"].as_str().unwrap());
+        players.insert(whom);
+    }
+    let players : Vec<String> = players.into_iter().collect();
+
+
+    let contents = read_to_string(format!("data/season_{:}.json", season)).unwrap();
+    let season_json = json::parse(contents.as_str()).unwrap();
+
+    let mut tips: Vec<Tip> = Vec::new();
+    for game in season_json.members() {
+        let day = game["group"]["groupOrderID"].as_u32().unwrap();
+        let team_1 = String::from(game["team1"]["shortName"].as_str().unwrap());
+        let team_2 = String::from(game["team2"]["shortName"].as_str().unwrap());
+
+        let mut goals: HashMap<String,Goal> = HashMap::new();
+        for player in &players {
+            let key = format!("{:}_{:}_{:}", day, &player, team_1);
+
+            if tips_json.has_key(&key) {
+                    let team_1_goals = tips_json[&key]["team_1_goals"].as_u32().unwrap();
+                let team_2_goals = tips_json[&key]["team_2_goals"].as_u32().unwrap();
+
+                goals.insert(String::from(player), Goal { team_1_goals, team_2_goals});
+            }
+        }
+
+        tips.push(Tip{day, team_1, team_2, goals});
+    }
+
+
+    print!("Day | {:30} | ", "Game");
+    for player in &players {
+        print!("{:10} | ", player);
+    }
+    println!("");
+
+    for tip in tips {
+        let game_name = format!("{:} vs. {:}", tip.team_1, tip.team_2);
+        print!("{:3} | {:30} | ", tip.day, game_name);
+        for player in &players {
+            let goals = tip.goals.get(player);
+            let goals_text = match goals {
+                Some(v) => format!("{:}:{:}", v.team_1_goals, v.team_2_goals ),
+                _ => String::from("-")
+            };
+            print!("{:10} | ", goals_text);
+        }
+        println!("");
+    }
+}
+
+fn show_goals(season: u32) {
     let contents = read_to_string(format!("data/season_{:}.json", season)).unwrap();
     let parsed = json::parse(contents.as_str()).unwrap();
 
